@@ -128,9 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#Large csv files
-movies_metadata.csv
-ratings.csv
-
 #config files
 config.py
