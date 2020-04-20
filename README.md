@@ -44,9 +44,11 @@ The ETL_pipeline() function works in accordance with the following assumptions:
 * Kaggle raw data (movies_metadata and ratings) are in .csv format
 * The raw data is current and has not been modified since Movielens_Extract.ipynb was created
 * Decisions regarding data transformation are consistent with those made in Movielens_Extract.ipynb
+* The user imports all dependencies
 * The user provides inputs for the ETL function in the correct order (i.e.'wikipedia.movies.json', 'movies_metadata.csv', 'ratings.csv')
 * The user's file directory matches the path in the function
 * The data is being loaded into existing table names (i.e.'movies', 'ratings'), using the existing connection string
+* The user's computer has enough RAM to accommodate the transfers where chunksize=1000000
 
 ### Observations / Recommendations
 This analysis demonstrates the power of ETL to handle large amounts of data. The function ETL_pipeline() renders the same tables as the code in Movielens_Extract.ipynb. Since the ETL_pipeline() function involves many blocks of code, various blocks were created using try-except blocks which print the respective block's success or failure message. This allows for quick troubleshooting for errors / typos. In this respect, the ETL_pipeline() function is more overtly informative than the exploratory code found in Movielens_Extract.ipynb.
